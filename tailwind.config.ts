@@ -8,6 +8,14 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   presets: [tailwindPresetMantine()],
+  theme: {
+    extend: {
+      animation: {
+        'spin-slow': 'spin 20s linear infinite',
+      },
+    },
+  },
   plugins: [],
 };
+
 export default config;

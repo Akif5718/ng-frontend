@@ -22,7 +22,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className='sticky top-0 z-10 bg-[#0F172B] text-white shadow'>
+    <header className='sticky top-0 z-50 bg-[#0F172B] text-white shadow'>
       <div className='antialiased'>
         <div className='w-full'>
           <div className='flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8'>
@@ -31,11 +31,19 @@ const Header: React.FC = () => {
                 href='#'
                 className='text-lg font-semibold tracking-widest uppercase rounded-lg focus:outline-none focus:shadow-outline'
               >
-                <Image
-                  className='h-12 w-36'
-                  radius='md'
-                  src='nastaghor_text_orange.png'
-                />
+                <div className='flex'>
+                  <Image
+                      className='h-12 w-20'
+                      radius='md'
+                      src='nastaghorLogo.png'
+                  />
+                  <Image
+                      className='h-12 w-36 ml-2 mt-1'
+                      radius='md'
+                      src='nastaghor_text_orange.png'
+                  />
+                </div>
+
               </a>
               <button
                 className='rounded-lg md:hidden focus:outline-none focus:shadow-outline'
@@ -58,7 +66,7 @@ const Header: React.FC = () => {
               </button>
             </div>
             <nav
-              className={`flex-col flex-grow pb-4 md:pb-0 md:flex md:justify-end md:flex-row ${
+              className={`flex-col flex-grow pb-4 lg:pr-4 md:pr-4 md:pb-0 md:flex md:justify-end md:flex-row ${
                 open ? 'flex' : 'hidden'
               }`}
             >
